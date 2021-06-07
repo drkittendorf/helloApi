@@ -1,7 +1,9 @@
-package com.helloapi.hello.controller;
+package com.helloapi.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+
 
 @RestController
 public class HelloController {
@@ -12,8 +14,7 @@ public class HelloController {
     }
 
     @RequestMapping(value="/hi/{name}", method= RequestMethod.GET)
-    @ResponseStatus(HttpStatus.CREATED)
-    String peaceOut(@PathVariable String name){
+    public String helloHeroku(@PathVariable String name){
         return "Whats happening" + name;
 
     }
